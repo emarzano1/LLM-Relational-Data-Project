@@ -1,3 +1,6 @@
 groq
 pandas
-sqlparse
+sqlglot
+tabulate
+matplotlib
+seaborn
