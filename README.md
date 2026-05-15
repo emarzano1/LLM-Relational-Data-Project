@@ -7,7 +7,9 @@ This project was developed for the assignment of the course Models and Practice 
 - `spider_evaluation_pipeline.ipynb`: main notebook containing the pipelines and evaluation logic;
 - `requirements.txt`: list of required Python libraries;
 - `merged_queries.json`: a curated subset of questions from the Spider benchmark;
-- `concert_singer.sqlite` & `student_1.sqlite`: SQLite databases used for testing.
+- `concert_singer.sqlite` & `student_1.sqlite`: SQLite databases used for testing;
+- `confronto_pipeline_qatch.png`: exported bar plot visualizing the final scores.
+
 
 ## Technical Details
 The project is implemented in Google Colab using the **openai/gpt-oss-120b** model via the Groq API. This model was chosen for its high performance in logical reasoning and SQL code generation, and robust handling of structured JSON formats.
@@ -30,3 +32,6 @@ Following the Qatch philosophy, the evaluation measures data output accuracy usi
 - Tuple Cardinality
 
 The system implements the Oracle Relevant Tables technique: for each question, the LLM is provided only with the specific tables and columns required, dynamically extracted by parsing the Ground Truth SQL (using the **sqlglot** library).
+
+## 📊 Final Evaluation Plot
+![Qatch Metrics Comparison](confronto_pipeline_qatch.png)
